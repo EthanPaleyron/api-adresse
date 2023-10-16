@@ -1,6 +1,23 @@
+h1 {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
 #map {
   margin: 1.5rem auto;
   width: 90%;
   height: 45rem;
   border: solid;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
 }
