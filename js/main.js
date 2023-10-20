@@ -1,3 +1,4 @@
+let citys = [];
 const urlLocation = (location, codePostal) => {
   let url = `https://api-adresse.data.gouv.fr/search/?q=${location}&postcode=${codePostal}`;
 
@@ -17,6 +18,14 @@ const urlLocation = (location, codePostal) => {
         let lat = data.features[0].geometry.coordinates[1];
         let lon = data.features[0].geometry.coordinates[0];
         initMap([lat, lon]);
+        if (citys.length >= 2) {
+          const distance = Math.sqrt(
+            (citys[0][0] - citys[0][1]) ** 2 + (citys[1][0] - citys[1][1]) ** 2
+          );
+          document.querySelector(
+            "#distance"
+          ).textContent = `The distance between ${citys} and ${citys} is ${distance} km`;
+        }
       })
     )
     .catch((error) => console.log("Error : " + error));
@@ -37,6 +46,7 @@ function initMap(coor) {
   if (myCard) {
     myCard.setView(coor, 11);
     marker = L.marker(coor).addTo(myCard);
+    citys.push(coor);
   } else {
     myCard = L.map("map").setView(coor, 11);
     L.tileLayer("https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png", {
@@ -46,5 +56,6 @@ function initMap(coor) {
       maxZoom: 20,
     }).addTo(myCard);
     marker = L.marker(coor).addTo(myCard);
+    citys.push(coor);
   }
 }

@@ -20,12 +20,18 @@
   <h1>API Addresse</h1>
 
   <form>
-    <label for="searchAddress">Address</label>
-    <input type="text" id="searchAddress" value="31 PI. Jules Grandclément">
-    <label for="searchPostalCode">Code postal</label>
-    <input type="text" id="searchPostalCode" value="69100">
-    <button id="submit">Submit</button>
+    <div>
+      <label for="searchAddress">Address:</label>
+      <input type="text" id="searchAddress" value="31 PI. Jules Grandclément">
+    </div>
+    <div>
+      <label for="searchPostalCode">Postal code:</label>
+      <input type="text" id="searchPostalCode" value="69100">
+      <button id="submit">Submit</button>
+    </div>
   </form>
+
+  <h2 id="distance"></h2>
 
   <div id="map"></div>
 

@@ -6,7 +6,15 @@ h1 {
 form {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 3rem;
+
+  button {
+    color: $w;
+    background-color: $blue;
+    padding: 0.5rem 0.7rem;
+    border-radius: 0.3rem;
+  }
 }
 
 #map {
