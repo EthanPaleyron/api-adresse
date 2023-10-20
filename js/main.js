@@ -1,4 +1,5 @@
 let citys = [];
+let firstCity;
 const urlLocation = (location, codePostal) => {
   let url = `https://api-adresse.data.gouv.fr/search/?q=${location}&postcode=${codePostal}`;
 
@@ -24,7 +25,9 @@ const urlLocation = (location, codePostal) => {
           );
           document.querySelector(
             "#distance"
-          ).textContent = `The distance between ${citys} and ${citys} is ${distance} km`;
+          ).textContent = `The distance as the crow flies is ${Math.floor(
+            distance
+          )}km`;
         }
       })
     )

@@ -1,31 +1,49 @@
 h1 {
-  margin: 1rem 0;
+  margin: 1.5rem 0;
   text-align: center;
+}
+
+#distance {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+ul {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
 }
 
 form {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
 
-  button {
+  div {
+    label {
+      margin-right: 0.3rem;
+    }
+    input {
+      padding: 0.5rem;
+      border-radius: 1rem;
+    }
+  }
+
+  #submit {
     color: $w;
+    font-weight: bold;
     background-color: $blue;
-    padding: 0.5rem 0.7rem;
-    border-radius: 0.3rem;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.8rem;
   }
 }
 
 #map {
-  margin: 1.5rem auto;
-  width: 90%;
-  height: 45rem;
+  margin: 3rem auto;
+  width: 70%;
+  height: 30rem;
   border: solid;
-}
-
-ul {
-  display: flex;
-  justify-content: center;
-  gap: 5rem;
 }
